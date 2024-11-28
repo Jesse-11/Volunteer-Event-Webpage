@@ -1,374 +1,215 @@
-:root {
-  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
-}
-
-body {
-    margin: 0;
-}
-
-.main-container {
-  overflow: hidden;
-}
-
-.main-container,
-.main-container * {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  height:100vh
+
 }
 
-input,
-select,
-textarea,
-button {
-  outline: 0;
+.image-1-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  object-fit:fill;
 }
+.sign-in-area {
+  position: absolute;
+  top: 0px;
+  left: 977px;
+  background-color: #fff;
+  width: 943px;
 
-.main-container {
-  position: relative;
-  width: 100%;
-  height: 4000px;
-  margin: 0 auto;
-  background: linear-gradient(137deg, #9bbad8, #bdd8f2);
-  overflow: hidden;
 }
-.flex-row {
-  position: relative;
-  width: 1611px;
-  height: 117px;
-  margin: 76px 0 0 142px;
-  z-index: 22;
-}
-.name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.welcome-back {
   position: absolute;
-  width: 241px;
-  height: 117px;
-  top: 0;
-  left: 0;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 105px;
-  text-align: center;
-  white-space: nowrap;
-  letter-spacing: 2.8px;
-  z-index: 18;
+  top: 196px;
+  left: 1202px;
+  font-size: 50px;
+  display: inline-block;
+  width: 493.4px;
+  height: 53.3px;
 }
-.nav1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sign-in-with {
   position: absolute;
-  width: 100px;
-  height: 75px;
-  top: 21px;
-  left: 903px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 45px;
-  text-align: center;
-  letter-spacing: 1.2px;
-  z-index: 22;
+  top: 11px;
+  left: 64.17px;
+  display: inline-block;
+  width: 201.7px;
 }
-.nav2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.google-sign-in-child {
   position: absolute;
-  width: 100px;
-  height: 75px;
-  top: 21px;
-  left: 1106px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 45px;
-  text-align: center;
-  letter-spacing: 1.2px;
-  z-index: 21;
+  top: 0px;
+  left: 0px;
+  border-radius: 29px;
+  border: 1px solid #1e1e1e;
+  box-sizing: border-box;
+  width: 292.3px;
+  height: 48px;
 }
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.google-logo-icon {
   position: absolute;
-  width: 100px;
-  height: 75px;
-  top: 21px;
-  left: 1309px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 45px;
-  text-align: center;
-  letter-spacing: 1.2px;
-  z-index: 20;
+  top: 11px;
+  left: 22.95px;
+  width: 26.9px;
+  height: 25px;
+  object-fit: cover;
 }
-.nav-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.google-sign-in {
   position: absolute;
-  width: 100px;
-  height: 75px;
-  top: 21px;
-  left: 1511px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 45px;
-  text-align: center;
-  letter-spacing: 1.2px;
-  z-index: 19;
+  top: 0px;
+  left: 0px;
+  width: 291.3px;
+  height: 47px;
 }
-.flex-row-df {
-  position: relative;
-  width: 1593px;
-  height: 547px;
-  margin: 146px 0 0 168px;
-  z-index: 14;
-}
-.ellipse {
+.facebook-logo-icon {
   position: absolute;
-  width: 700px;
-  height: 700px;
-  top: -170px;
-  left: 800px;
-  background: url(/images/yellow\ blur.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 9;
+  top: 10px;
+  left: 22.95px;
+  width: 26.9px;
+  height: 27px;
+  object-fit: cover;
 }
-.lifesavers-caretaking {
+.facebook-sign-in {
   position: absolute;
-  width: 641px;
-  height: 547px;
-  top: 0;
-  left: 952px;
-  background: url(/images/HealthCare\ WebApp.png)
-    no-repeat center;
-  background-size: contain;
-  z-index: 10;
+  top: 68px;
+  left: 0px;
+  width: 291.3px;
+  height: 47px;
 }
-.improve-lives {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.apple-logo-icon {
   position: absolute;
-  width: 483px;
-  height: 260px;
+  top: 11px;
+  left: 20.95px;
+  width: 30.9px;
+  height: 25px;
+  object-fit: cover;
+}
+.apple-sign-in {
+  position: absolute;
+  top: 136px;
+  left: 0px;
+  width: 291.3px;
+  height: 47px;
+}
+.mail-logo-icon {
+  position: absolute;
   top: 14px;
-  left: 0;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 80px;
-  font-weight: 800;
-  line-height: 80px;
+  left: 20.95px;
+  width: 25.9px;
+  height: 20px;
+  object-fit: cover;
+}
+.mail-sign-in {
+  position: absolute;
+  top: 204px;
+  left: 0px;
+  width: 291.3px;
+  height: 47px;
+}
+.sign-in-options {
+  position: absolute;
+  top: 328px;
+  left: 1303px;
+  width: 291.3px;
+  height: 251px;
   text-align: left;
-  text-transform: capitalize;
-  letter-spacing: 3.2px;
-  z-index: 11;
 }
-.join-us {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.divider-child {
   position: absolute;
-  width: 493px;
-  height: 90px;
-  top: 289px;
-  left: 0;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 30px;
+  top: 17.29px;
+  left: 0px;
+  width: 300px;
+  height: 1.1px;
+  object-fit: contain;
+}
+.divider-item {
+  position: absolute;
+  top: 16.29px;
+  left: 354px;
+  width: 300px;
+  height: 1.1px;
+  object-fit: contain;
+}
+.or {
+  position: absolute;
+  top: 0px;
+  left: 316px;
+}
+.divider {
+  position: absolute;
+  top: 611px;
+  left: 1123px;
+  width: 654px;
+  height: 24px;
   text-align: left;
-  letter-spacing: 1.2px;
-  z-index: 12;
+  color: rgba(0, 0, 0, 0.8);
 }
-.rectangle {
+.create-an-account {
   position: absolute;
-  width: 270px;
-  height: 107px;
-  top: 422px;
-  left: 0;
-  cursor: pointer;
-  background: #ffa896;
-  border: none;
-  z-index: 13;
-  border-radius: 40px;
+  top: 678px;
+  left: 1303px;
+  font-size: 35px;
+  height: fit-content;
 }
-.sign-up {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.email-address {
   position: absolute;
-  height: 30px;
-  top: 39px;
-  left: 81px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 30px;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 1.2px;
-  z-index: 15;
+  top: 0px;
+  left: 3px;
+  display: inline-block;
+  width: 105px;
+  height: 16px;
 }
-.rectangle-2 {
+.email-sign-up-child {
   position: absolute;
-  width: 270px;
-  height: 107px;
-  top: 422px;
-  left: 328px;
-  cursor: pointer;
-  background: transparent;
-  border: 2px solid #ffffff;
-  z-index: 14;
-  border-radius: 40px;
+  top: 24px;
+  left: 0px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.38);
+  border: 1px solid #1e1e1e;
+  box-sizing: border-box;
+  width: 269px;
+  height: 39px;
 }
-.log-in {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.email-sign-up {
   position: absolute;
-  height: 30px;
-  top: 37px;
-  left: 90px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 30px;
-  text-align: left;
-  white-space: nowrap;
-  letter-spacing: 1.2px;
-  z-index: 16;
+  top: 748px;
+  left: 1314px;
+  width: 269px;
+  height: 63px;
+  font-size: 15px;
 }
-.participating-organisations {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.create-account-button-child {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 10px;
+  background-color: rgba(129, 233, 121, 0.77);
+  width: 154px;
+  height: 37px;
+}
+.continue {
+  position: absolute;
+  top: 7px;
+  left: 33px;
+  display: inline-block;
+  width: 87px;
+}
+.create-account-button {
+  position: absolute;
+  top: 836px;
+  left: 1372px;
+  width: 154px;
+  height: 37px;
+}
+.loginsignup {
+  width: 100%;
   position: relative;
-  width: 413px;
-  height: 30px;
-  margin: 154px 0 0 203px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 30px;
+  background-color: #fff;
+  overflow: hidden;
   text-align: center;
-  white-space: nowrap;
-  letter-spacing: 1.2px;
-  z-index: 1;
+  font-size: 20px;
+  color: #1e1e1e;
+  font-family: 'Inria Serif';
 }
-.rectangle-3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  width: 1585px;
-  height: 100px;
-  margin: 13px 0 0 168px;
-  background: rgba(255, 168, 150, 0.55);
-  z-index: 7;
-}
-.org-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-  width: 176.111px;
-  height: 73px;
-  color: #ffffff;
-  font-family: Outfit, var(--default-font-family);
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 73px;
-  text-align: center;
-  letter-spacing: 1.6px;
-}
-.org-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 176.111px;
-    height: 73px;
-    color: #ffffff;
-    font-family: Outfit, var(--default-font-family);
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 73px;
-    text-align: center;
-    letter-spacing: 1.6px;
-    z-index: 4;
-}
-.org-3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 176.111px;
-    height: 73px;
-    color: #ffffff;
-    font-family: Outfit, var(--default-font-family);
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 73px;
-    text-align: center;
-    letter-spacing: 1.6px;
-    z-index: 5;
-}
-.org-4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 176.111px;
-    height: 73px;
-    color: #ffffff;
-    font-family: Outfit, var(--default-font-family);
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 73px;
-    text-align: center;
-    letter-spacing: 1.6px;
-    z-index: 6;
-}
-.org-5 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    width: 176.111px;
-    height: 73px;
-    color: #ffffff;
-    font-family: Outfit, var(--default-font-family);
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 73px;
-    text-align: center;
-    letter-spacing: 1.6px;
-    z-index: 7;
-}
-
 

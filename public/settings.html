@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/settings.css">
+</head>
+<body>
+    <div id="app">
+
+
+        <div class="sticky-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/main-page/logo-placeholder.png" alt="AMAF Brand Logo"></a>
+            </div>
+            <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li class="our-role"><a href="our-role.html">Our role</a></li>
+                <li class="support-us"><a href="support-us.html">Support us</a></li>
+                <li class="events"><a href="events.html">Events</a></li>
+                <li class="about"><a href="about.html">About</a></li>
+                <li class="profile-icon"><img src="images/main-page/profile-icon.png" alt="Profile Icon"></li>
+            </ul>
+        </div>
+        <div class="parent">
+            <div class="settings">
+                <h1>Settings</h1>
+                <ul class="options">
+                    <li class="account"><a href="settings.html">Account</a></li>
+                    <li class="adminPage"><a href="admin.html">Admin Dashboard</a></li>
+                    <li class="profileEdit"><a href="profile.html">Edit Profile</a></li>
+                </ul>
+
+                <div class ="information">
+
+                    <ul class="account-settings">
+                        <li>Email address</li>
+                        <li>Username</li>
+                        <li>Profile Picture</li>
+                    </ul>
+
+                    <ul class="inputs">
+                        <li><input type="text" placeholder="Email address"></li>
+                        <li><input type="text" placeholder="Username"></li>
+                        <li><input type="image" src="images/main-page/profile-icon.png" alt="Submit"></li>
+                    </ul>
+
+                </div>
+
+                <div class="Account-deletion">
+                    <h4>Deactivate account</h4>
+                    <p>Deactivating will suspend your account, until you sign back in.</p>
+
+                </div>
+                <div class="Account-deletion">
+                    <h4>Delete Account</h4>
+                    <p>Permanetly delete your account,including all user data and connections.</p>
+
+                </div>
+
+                <hr>
+                <div class="logout">
+                    <h4>Logout</h4>
+                    <p>random text for now</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

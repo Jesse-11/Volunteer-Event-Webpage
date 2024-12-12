@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page with Vue</title>
+    <link rel="stylesheet" href="stylesheets/admin.css">
+</head>
+<body>
+    <div id="app">
+        <div class="sticky-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/main-page/logo-placeholder.png" alt="AMAF Brand Logo"></a>
+            </div>
+            <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li class="our-role"><a href="our-role.html">Our role</a></li>
+                <li class="support-us"><a href="support-us.html">Support us</a></li>
+                <li class="events"><a href="events.html">Events</a></li>
+                <li class="about"><a href="about.html">About</a></li>
+                <li class="profile-icon"><img src="images/main-page/profile-icon.png" alt="Profile Icon"></li>
+            </ul>
+        </div>
+        <div class="adminPage">
+            <h1>Admin Page</h1>
+
+            <div class="add-user">
+                <h2>Add New User</h2>
+                <form @submit.prevent="addUser">
+                    <label for="newUsername">Username:</label>
+                    <input type="text" id="newUsername" v-model="newUser.username" required>
+
+                    <label for="newEmail">Email:</label>
+                    <input type="email" id="newEmail" v-model="newUser.email" required>
+
+                    <label for="newPassword">Password:</label>
+                    <input type="password" id="newPassword" v-model="newUser.password" required>
+
+                    <label for="newIsAdmin">Admin:</label>
+                    <input type="checkbox" id="newIsAdmin" v-model="newUser.is_admin">
+
+                    <button type="submit">Add User</button>
+                </form>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Admin</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="data-body">
+                    <tr v-for="user in users" :key="user.user_id">
+                        <td>{{ user.user_id }}</td>
+                        <td><input type="text" v-model="user.username"></td>
+                        <td><input type="text" v-model="user.email"></td>
+                        <td><input type="text" v-model="user.password" disabled></td>
+                        <td><input type="checkbox" v-model="user.is_admin"></td>
+                        <td>
+                            <button type="button" @click="updateUser(user)">Update</button>
+                            <button type="button" @click="deleteUser(user)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div v-if="errorMessage">{{ errorMessage }}</div>
+        </div>
+
+        <!-- Add Vue.js from CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <!-- Add Axios for AJAX requests -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- Add the main script file -->
+        <script src="javascripts/admin.js"></script> <!-- Ensure the path is correct -->
+    </div>
+</body>
+</html>

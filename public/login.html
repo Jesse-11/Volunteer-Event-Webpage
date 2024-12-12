@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAF</title>
+    <link rel="stylesheet" href="stylesheets/login.css">
+</head>
+<body>
+    
+    <div id="app" class="page">
+        <div class="sign-in">
+            <div class="picture">
+                <img src="images/login-signup-page/sign-in-img.avif" alt="Sign In Image">
+            </div>
+            <div class="sign-in-area">
+                <h1>Welcome<span> back...</span></h1>
+                <div class="sign-in-buttons">
+                    <div class="button">
+                        <button type="button"><img src="images/login-signup-page/google-log-in.png" alt="Google Icon">Sign in with Google</button>
+                    </div>
+                    <div class="button">
+                        <button type="button"><img src="images/login-signup-page/facebook-log-in.png" alt="Facebook Icon">Sign in with Facebook</button>
+                    </div>
+                    <div class="button">
+                        <button type="button"><img src="images/login-signup-page/apple-log-in.png" alt="apple Icon">Sign in with apple</button>
+                    </div>
+                    <div class="button">
+                        <button id="email-btn" type="button"><img src="images/login-signup-page/mail-log-in.png" alt="Email Icon">Sign in with Email</button>
+                    </div>
+                </div>
+                <div class="sign-up">
+                    <p>Don't have an account with us? Sign up</p>
+                    <form action="signup.html" class="sign-up-form">
+                        <input type="submit" class="btn" value="Continue">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- email login modal -->
+    <div id="emailLoginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login With Email</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="javascripts/login.js"></script>
+</body>
+</html>

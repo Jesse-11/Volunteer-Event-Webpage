@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/profile.css">
+</head>
+<body>
+    <div id="app">
+
+
+        <div class="sticky-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/main-page/logo-placeholder.png" alt="AMAF Brand Logo"></a>
+            </div>
+            <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li class="our-role"><a href="our-role.html">Our role</a></li>
+                <li class="support-us"><a href="support-us.html">Support us</a></li>
+                <li class="events"><a href="events.html">Events</a></li>
+                <li class="about"><a href="about.html">About</a></li>
+                <li class="profile-icon"><img src="images/main-page/profile-icon.png" alt="Profile Icon"></li>
+            </ul>
+        </div>
+        <div class="parent">
+            <div class="settings">
+                <h1>Profile Edit</h1>
+                    <ul class="options">
+                        <li class="account"><a href="settings.html">Account</a></li>
+                        <li class="adminPage"><a href="admin.html">Admin Dashboard</a></li>
+                        <li class="profileEdit"><a href="profile.html">Edit Profile</a></li>
+                    </ul>
+
+                    <div class="email">
+                        <h4>Email Address</h4>
+                        <p>Change your email address</p>
+                        <input type="text" id="email" placeholder="Email address">
+
+                    </div>
+                    <div class="username">
+                        <h4>Username</h4>
+                        <p>Change your username</p>
+                        <input type="text" id="username" placeholder="Username">
+                    </div>
+                    <div class="buttons">
+                        <button class="save" type="button" id="save-button">Save Changes</button>
+                        <button class="cancel" type="button">Cancel</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascripts/profile.js"></script>
+</body>
+</html>

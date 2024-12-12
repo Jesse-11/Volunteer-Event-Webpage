@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAF</title>
+
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body data-logged-in="false">
+
+    <div id="app" class="page">
+
+
+        <div class="static-header">
+            <header>
+                <div class="static-text">
+                    <p> 🌟 Volunteer Appreciation Day! Join us in celebrattion of our volunteers! 🌟 </p>
+                    <p>	📅 Date: Saturday, May 25th 📅 </p>
+                    <p>🕒 Time: 11:00 AM to 3:00 PM 🕒</p>
+                    <p>📍 Location: Harmony Park Community Center, Adelaide 📍</p>
+                </div>
+            </header>
+        </div>
+
+        <div class="sticky-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/main-page/logo-placeholder.png" alt="AMAF Brand Logo"></a>
+            </div>
+            <div id="menu-toggle" class="menu-toggle"  @click="toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" :class="{ 'active': isMenuActive }">
+                <li class="our-role"><a href="our-role.html">Our role</a></li>
+                <li class="support-us"><a href="#" data-scroll-to="card-section" @click.prevent="scrollToSection('card-section')">Support us</a></li>
+                <li class="events"><a href="events.html">Events</a></li>
+                <li class="about"><a href="about.html">About</a></li>
+                <li class="profile-icon">
+                    <button type="button" class="profile-btn">
+                        <img src="images/main-page/profile-icon.png" alt="Profile Icon">
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+
+
+        <main>
+
+            <div class="cta">
+                <div class="cta-image">
+                    <img src="images/main-page/cta-image-2.jpg" alt="Image Description">
+                </div>
+                <div class="cta-text">
+                    <h1>Support us and make a difference!</h1>
+                    <p>Join our mission to protect and preserve marine life.
+                        Every helping hand contributes to the safety
+                        and well-being of sea animals in and around Australia. </p>
+                </div>
+            </div>
+
+
+            <hr>
+
+            <div class="card-section" id="card-section">
+                <div class="card">
+
+                    <img src="images/main-page/dolphone-card-1.webp" alt="Image Description">
+                    <h1>Marine Research</h1>
+                    <p> Sub text, Describe the section with any extra information
+                         as needed.
+                    </p>
+                    <button type="button" @click="loadMoreInfo(cardId)">Learn More</button>
+
+                </div>
+
+                <div class="card">
+
+                    <img src="images/main-page/otter-card-2.webp" alt="Image Description">
+                    <h1>Animal Rehabilitation</h1>
+                    <p> Sub text, Describe the section with any extra information
+                         as needed.
+                    </p>
+                    <button type="button">Learn More</button>
+                </div>
+
+                <div class="card">
+
+                    <img src="images/main-page/trash-card-3.jpg" alt="Image Description">
+                    <h1>Ocean Cleanup</h1>
+                    <p> Sub text, Describe the section with any extra information
+                         as needed.
+                    </p>
+                    <button type="button">Learn More</button>
+                </div>
+
+                <div class="card">
+
+                    <img src="images/main-page/reef-card-4.jpg" alt="Image Description">
+                    <h1>Reef Restoration</h1>
+                    <p> Sub text, Describe the section with any extra information
+                         as needed.
+                    </p>
+                    <button type="button">Learn More</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/main-page/education-card-5.jpg" alt="Image Description">
+                    <h1>Animal Welfare</h1>
+                    <p> Sub text, Describe the section with any extra information
+                         as needed.
+                    </p>
+                    <button type="button">Learn More</button>
+                </div>
+
+                <div class="card">
+                    <img src="images/main-page/palstic-card-6.jpg" alt="Image Description">
+                    <h1>Marine Publication</h1>
+                    <p> Sub text, Describe the section with any extra information
+                         as needed.
+                    </p>
+                    <button type="button">Learn More</button>
+                </div>
+            </div>
+
+            <article>
+                <h1 class="stat-header">[Company Name] supports thousands of Australian animal based issues
+                    <span>every single year!</span>
+                </h1>
+                <p>
+                    We compile our statistcs from year to year based on the various cases we recieve.
+                    Our team of dedicated volunteers and staff work tirelessly to ensure the safety and well-being of all animals in our care.
+                </p>
+            </article>
+
+            <div class="stats-section">
+                <div class="stats">
+
+                    <div class="stat-card">
+                        <h1>35,240</h1>
+                        <h3>Animals cared for</h3>
+                        <p>In 2022-2023 (Brand) cared for over 30,000 marine species
+                            including sharks, dolphins, fish, dugong, birds and more.
+                            Excluding any introduced wild animals. </p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h1>10,612</h1>
+                        <h3>Cruelty Cases Investigated</h3>
+                        <p>In 2022-2023 (Brand) received almost 15,000 cruelty cases from
+                            South Australian sources, thoroughly investigating over 10,000 of them. </p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h1>179</h1>
+                        <h3>Marine Articles Published</h3>
+                        <p>(Brand) supports Australian marine research by producing hindered of useful articles. </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </main>
+
+
+        <footer>
+            <div class="footer-section">
+                <div class="contact-us">
+                    <h1>Contact Us</h1>
+                    <p>📞 08 8231 6931</p>
+                    <p>📧 North Terrace, Adeliade</p>
+                </div>
+
+                <div class="brand">
+                    <img class="logo" src="images/main-page/logo-placeholder.png" alt="Logo">
+                    <div class="social-media">
+                        <img src="images/main-page/facebook-log-in.png" alt="Facebook Icon">
+                        <img src="images/main-page/x-logo.png" alt="Twitter Icon">
+                        <img src="images/main-page/instagram-logo.webp" alt="Instagram Icon">
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+
+
+    </div>
+    
+    <script src="javascripts/main-page.js" defer></script>
+</body>
+</html>

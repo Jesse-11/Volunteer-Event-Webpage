@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page</title>
+    <link rel="stylesheet" href="stylesheets/eventpage.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="static-header">
+            <header>
+                <div class="static-text">
+                    <p>  Volunteer Appreciation Day! Join us in celebration of our volunteers!  </p>
+                    <p>     Date: Saturday, May 25th </p>
+                    <p> Time: 11:00 AM to 3:00 PM </p>
+                    <p> Location: Harmony Park Community Center, Adelaide</p>
+                </div>
+            </header>
+        </div>
+
+        <div class="sticky-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/main-page/logo-placeholder.png" alt="AMAF Brand Logo"></a>
+            </div>
+            <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" :class="{ 'active': isMenuActive }">
+                <li class="our-role"><a href="our-role.html">Our role</a></li>
+                <li class="support-us"><a href="support-us.html">Support us</a></li>
+                <li class="events"><a href="events.html">Events</a></li>
+                <li class="about"><a href="about.html">About</a></li>
+                <li class="profile-icon"><img src="images/main-page/profile-icon.png" alt="Profile Icon"></li>
+            </ul>
+        </div>
+
+        <div class="banner">
+            <img src="images/event-page/banner.jpg" alt="banner">
+        </div>
+
+        <div class="event-form">
+            <h2>Create New Event</h2>
+            <form @submit.prevent="createEvent">
+                <label for="org_id">Organization ID:</label>
+                <input type="number" v-model="newEvent.org_id" required>
+
+                <label for="title">Title:</label>
+                <input type="text" v-model="newEvent.title" required>
+
+                <label for="description">Description:</label>
+                <textarea v-model="newEvent.description" required></textarea>
+
+                <label for="event_date">Event Date:</label>
+                <input type="date" v-model="newEvent.event_date" required>
+
+                <button type="submit">Create Event</button>
+            </form>
+        </div>
+
+        <div class="upcoming-events">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for events">
+                <button type="button">Search</button>
+            </div>
+            <hr>
+
+            <div class="heading-text">
+                <h1>UPCOMING AUSTRALIA WIDE EVENTS</h1>
+            </div>
+
+            <div class="card-section-events">
+                <div class="card" v-for="event in events" :key="event.event_id">
+                    <img :src="event.image || 'images/event-page/default.jpg'" alt="Event Image">
+                    <p>{{ event.title }}</p>
+                    <p>{{ event.description }}</p>
+                    <p>{{ event.event_date }}</p>
+                    <button type="button">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-section">
+                <div class="contact-us">
+                    <h1>Contact Us</h1>
+                    <p>📞 08 8231 6931</p>
+                    <p>📧 North Terrace, Adelaide</p>
+                </div>
+
+                <div class="brand">
+                    <img class="logo" src="images/main-page/logo-placeholder.png" alt="Logo">
+                    <div class="social-media">
+                        <img src="images/main-page/facebook-log-in.png" alt="Facebook Icon">
+                        <img src="images/main-page/x-logo.png" alt="Twitter Icon">
+                        <img src="images/main-page/instagram-logo.webp" alt="Instagram Icon">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="javascripts/events.js" defer></script>
+</body>
+</html>

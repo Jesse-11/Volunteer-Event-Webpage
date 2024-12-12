@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/events.css">
+</head>
+<body>
+    <div id="app">
+        <div class="static-header">
+            <header>
+                <div class="static-text">
+                    <p>  Volunteer Appreciation Day! Join us in celebrattion of our volunteers!  </p>
+                    <p>     Date: Saturday, May 25th </p>
+                    <p> Time: 11:00 AM to 3:00 PM </p>
+                    <p> Location: Harmony Park Community Center, Adelaide</p>
+                </div>
+            </header>
+        </div>
+
+        <div class="sticky-nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/main-page/logo-placeholder.png" alt="AMAF Brand Logo"></a>
+            </div>
+            <div id="menu-toggle" class="menu-toggle" @click="toggleMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li class="our-role"><a href="our-role.html">Our role</a></li>
+                <li class="support-us"><a href="support-us.html">Support us</a></li>
+                <li class="events"><a href="events.html">Events</a></li>
+                <li class="about"><a href="about.html">About</a></li>
+                <li class="profile-icon"><img src="images/main-page/profile-icon.png" alt="Profile Icon"></li>
+            </ul>
+        </div>
+
+
+        <div class="banner">
+            <div class="banner-image">
+                <img src="images/event-navigation-page/websitebanner.jpg" img alt="Banner">
+            </div>
+                <div class="banner-header">
+                    <h1>Help save our oceans</h1>
+                    <p>
+                    Join our Marine Volunteer Organization and become a vital part of preserving our oceans' health and biodiversity.Together, let's make waves of positive change and protect our planet's most precious resource – the ocean.
+                    </p>
+                </div>
+            </div>
+            <div class="event-creation">
+                <h2>Create New Event</h2>
+
+                <form action="#" class="sign-up-form">
+                    <label for="title">Event Title:</label><br>
+                    <input type="text" id="title" name="title" required><br><br>
+
+                    <label for="description">Event Description:</label><br>
+                    <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+                    <label for="event_date">Event Date and Time:</label><br>
+                    <input type="datetime-local" id="event_date" name="event_date" required><br><br>
+
+                    <label for="org_id">Organization ID:</label><br>
+                    <input type="number" id="org_id" name="org_id" required><br><br>
+
+                    <input type="submit" value="Create Event">
+                </form>
+            </div>
+
+
+
+
+        <div class="upcoming-events">
+            <hr>
+
+            <div class="heading-text">
+                <h1>Choose your state</h1>
+            </div>
+
+            <div class="card-section-events">
+
+
+                <div class="card">
+                    <img src="images/event-navigation-page/sa.svg" img alt="South Australia">
+                    <p>South Australia</p>
+                    <button type="button">Learn More</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/event-navigation-page/nsw.png" img alt="New South Wales">
+                    <p>New South Wales</p>
+                    <button type="button">Learn More</button>
+
+                </div>
+
+                <div class="card">
+                    <img src="images/event-navigation-page/qld.png" img alt="Queensland">
+                    <p>Queensland</p>
+                    <button type="button">Learn More</button>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="upcoming-events">
+
+            <div class="card-section-events">
+
+
+                <div class="card">
+                    <img src="images/event-navigation-page/tas.png" img alt="Tasmania">
+                    <p>Tasmania</p>
+                    <button type="button">Learn More</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/event-navigation-page/vic.svg" img alt="Victoria">
+                    <p>Victoria </p>
+                    <button type="button">Learn More</button>
+
+                </div>
+
+                <div class="card">
+                    <img src="images/event-navigation-page/wa.svg" img alt="Western Australia">
+                    <p>Western Australia</p>
+                    <button type="button">Learn More</button>
+                </div>
+
+
+            </div>
+
+            <div class="card-section-events">
+
+
+                <div class="card">
+                    <img src="images/event-navigation-page/nt.svg" img alt="Northern Territory">
+                    <p>Northern Territory </p>
+                    <button type="button">Learn More</button>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/event-navigation-page/act.png" img alt="Australia Capital Territory">
+                    <p>Australia Capital Territory</p>
+                    <button type="button">Learn More</button>
+
+                </div>
+
+
+                <hr>
+
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-section">
+                <div class="contact-us">
+                    <h1>Contact Us</h1>
+                    <p>📞 08 8231 6931</p>
+                    <p>📧 North Terrace, Adeliade</p>
+                </div>
+
+                <div class="brand">
+                    <img class="logo" src="images/main-page/logo-placeholder.png" alt="Logo">
+                    <div class="social-media">
+                        <img src="images/main-page/facebook-log-in.png" alt="Facebook Icon">
+                        <img src="images/main-page/x-logo.png" alt="Twitter Icon">
+                        <img src="images/main-page/instagram-logo.webp" alt="Instagram Icon">
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+    </div>
+        <script src="javascripts/events.js" defer></script>
+</body>
+</html>
